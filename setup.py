@@ -30,7 +30,7 @@ setuptools.setup(
     install_requires=[
         "onnxruntime>=1.10.0,<2",
         'ai-edge-litert>=2.0.2,<3; platform_system == "Linux" or platform_system == "Darwin"',
-        # 'speexdsp-ns>=0.1.2,<1; platform_system == "Linux"',
+        "speexdsp-ns @ git+https://github.com/TeaPoly/speexdsp-ns-python",
         "tqdm>=4.0,<5.0",
         "scipy>=1.3,<2",
         "scikit-learn>=1,<2",
