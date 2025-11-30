@@ -287,7 +287,7 @@ class Model:
         self.preprocessor = AudioFeatures(
             inference_framework=inference_framework,
             melspec_model_path=(
-                os.path.join(base_path, f"melspec_model.{inference_framework}")
+                os.path.join(base_path, f"melspectrogram.{inference_framework}")
                 if base_path
                 else ""
             ),
