@@ -285,7 +285,18 @@ class Model:
 
         # Create AudioFeatures object
         self.preprocessor = AudioFeatures(
-            inference_framework=inference_framework, **kwargs
+            inference_framework=inference_framework,
+            melspec_model_path=(
+                os.path.join(base_path, f"melspec_model.{inference_framework}")
+                if base_path
+                else ""
+            ),
+            embedding_model_path=(
+                os.path.join(base_path, f"embedding_model.{inference_framework}")
+                if base_path
+                else ""
+            ),
+            **kwargs,
         )
 
     def get_parent_model_from_label(self, label):
